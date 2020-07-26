@@ -16,7 +16,7 @@ def cv_show(name, img):
     cv2.destroyAllWindows()
 
 # 读取原始图像
-pic = './01A03035=2.jpg'
+pic = ' '
 img = cv2.imread(pic)
 
 # img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
