@@ -34,7 +34,7 @@ def addFog(img):
 
 
 # 读取原始图像
-pic = ''
+pic = ' '
 img = cv2.imread(pic)
 
 # 获取图片形状
