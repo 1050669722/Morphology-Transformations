@@ -33,7 +33,7 @@ def addFog(img):
 
 
 # 读取原始图像
-pic = './01A03035=2.jpg'
+pic = ' '
 img = cv2.imread(pic)
 
 tmp = img.copy()
