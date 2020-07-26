@@ -37,7 +37,7 @@ def motion_filter(img, K_size=3):
     return out
 
 # Read image
-pic = './01A03035=2.jpg'
+pic = ' '
 img = cv2.imread(pic)
 
 tmp = img.copy()
