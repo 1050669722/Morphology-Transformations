@@ -15,7 +15,7 @@ def cv_show(name, img):
     cv2.destroyAllWindows()
 
 # 读取原始图像
-pic = './01A03035=2.jpg'
+pic = ' '
 img = cv2.imread(pic)
 
 # 获取图片形状
