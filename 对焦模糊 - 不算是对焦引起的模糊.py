@@ -12,7 +12,7 @@ def cv_show(name, img):
     cv2.waitKey(1000)
     cv2.destroyAllWindows()
 
-# img = cv2.imread('./01A03035=2.jpg')
+# img = cv2.imread(' ')
 #
 # filter = 1 / 16 * np.ones((4, 4))
 # img_filter = cv2.filter2D(img, -1, filter)
@@ -20,7 +20,7 @@ def cv_show(name, img):
 #
 # cv_show('img', img_filter)
 
-pic = './01A03035=2.jpg'
+pic = ' '
 img = cv2.imread(pic)
 
 tmp = img.copy()
