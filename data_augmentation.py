@@ -485,8 +485,8 @@ if __name__ == '__main__':
 
     dataAug = DataAugmentForObjectDetection()
 
-    source_pic_root_path = 'D:\\车脸数据集\\train_data'
-    source_xml_root_path = 'D:\\车脸数据集\\train_label'
+    source_pic_root_path = ' '
+    source_xml_root_path = ' '
 
     for parent, _, files in os.walk(source_pic_root_path):
         i = 5200
@@ -529,8 +529,8 @@ if __name__ == '__main__':
                         #     auged_img, auged_bboxes = dataAug.methods(a, auged_img, auged_bboxes)
                         m = 5 - len(str(i))
                         txt_name = str(0) * m + str(i) + '.txt'
-                        txt_path = os.path.join('D:\\车脸数据集\\aug_image_data\\txt', txt_name)
-                        es_anchor = os.path.join('D:\\车脸数据集\\aug_image_data\\pre_anchor', 'anchor1.txt')
+                        txt_path = os.path.join(' ', txt_name)
+                        es_anchor = os.path.join(' ', ' ')
                         for k in range(len(auged_bboxes)):
                             auged_bboxes[k].append(classname[k])
                             f = open(txt_path, 'w')
@@ -540,26 +540,26 @@ if __name__ == '__main__':
                             a1 = auged_bboxes[k][2] - auged_bboxes[k][0]
                             a2 = auged_bboxes[k][3] - auged_bboxes[k][1]
                             anchor.writelines(str(a1) + ' ' + str(a2) + '\n')
-                        img_path = 'D:\\车脸数据集\\aug_image_data\\img'
+                        img_path = ' '
                         img_name = str(0) * m + str(i) + '.png'
                         img_name = os.path.join(img_path, img_name)
                         cv2.imwrite(img_name, auged_img)
 
-                        pic_path = 'D:\\车脸数据集\\aug_image_data\\pic'
+                        pic_path = ' '
                         aug_name = os.path.join(pic_path, 'pic' + str(i) + '.png')
                         # raw_name = os.path.join(pic_path, 'pic' + str(i) + '.png')
                         aug_img = show_pic(auged_img, auged_bboxes, classname)  # 强化后的图
                         cv2.imwrite(aug_name, aug_img)
                         i += 1
                     break
-                    # pic_path = '/home/lixiang/PycharmProjects/lx/data/pic'
+                    # pic_path = ' '
                 else:
                     auged_img, auged_bboxes = dataAug.dataAugment(img, coords)
                     i += 1
                 n = 5 - len(str(i))
                 txt_name = str(0) * n + str(i) + '.txt'
-                txt_path = os.path.join('D:\\车脸数据集\\aug_image_data\\txt', txt_name)
-                es_anchor = os.path.join('D:\\车脸数据集\\aug_image_data\\pre_anchor', 'anchor1.txt')
+                txt_path = os.path.join(' ', txt_name)
+                es_anchor = os.path.join(' ', ' ')
                 for k in range(len(auged_bboxes)):
                     auged_bboxes[k].append(classname[k])
                     f = open(txt_path, 'w')
@@ -569,12 +569,12 @@ if __name__ == '__main__':
                     a1 = auged_bboxes[k][2] - auged_bboxes[k][0]
                     a2 = auged_bboxes[k][3] - auged_bboxes[k][1]
                     anchor.writelines(str(a1) + ' ' + str(a2) + '\n')
-                img_path = 'D:\\车脸数据集\\aug_image_data\\img'
+                img_path = ' '
 
                 img_name = str(0) * n + str(i) + '.png'
                 img_name = os.path.join(img_path, img_name)
                 cv2.imwrite(img_name, auged_img)
-                pic_path = 'D:\\车脸数据集\\aug_image_data\\pic'
+                pic_path = ' '
                 aug_name = os.path.join(pic_path, 'pic' + str(i) + '.png')
                 raw_name = os.path.join(pic_path, 'pic' + str(i) + '.png')
                 aug_img = show_pic(auged_img, auged_bboxes, classname)  # 强化后的图
